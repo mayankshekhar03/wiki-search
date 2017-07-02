@@ -1,6 +1,9 @@
 
 
 $(document).ready(function(){
+   $(".query").addClass("animated fadeIn");
+   $(".footer").addClass("animated fadeIn");
+
    $("#search-button").click(function(e){
         e.preventDefault();  // this shit was causing the api to not load any results wtf
         q = $('#search-input').val();

@@ -8,9 +8,11 @@ $(document).ready(function(){
             url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + q.toString() + "&prop=info&inprop=url&utf8=&format=json",
             dataType: 'jsonp',
             success: function (x) {
+                $(".results").html("");
               for (var i = 0; i < x.query.search.length; i++){
-                $(".results").append('<a href="https://en.wikipedia.org/wiki/' + x.query.search[i].title + '">Open</a><br>' + x.query.search[i].snippet + '<hr>');
+                $(".results").append('<a href="https://en.wikipedia.org/wiki/' + x.query.search[i].title + '">'+ x.query.search[i].title +'</a><br>' + x.query.search[i].snippet + '<hr>');
               }
+                console.log(x.query.search[1]);
             },
             error: function(){alert('error retrieving data.');}
         });

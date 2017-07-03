@@ -3,7 +3,6 @@
 $(document).ready(function(){
    $(".query").addClass("animated fadeIn");
    $(".footer").addClass("animated fadeIn");
-
    $("#search-button").click(function(e){
         e.preventDefault();  // this shit was causing the api to not load any results wtf
         q = $('#search-input').val();
@@ -16,7 +15,7 @@ $(document).ready(function(){
                     showError(q);
                 } else {
                     for (var i = 0; i < x.query.search.length; i++){
-                        $(".results").append('<a href="https://en.wikipedia.org/wiki/' + x.query.search[i].title + '">'+ x.query.search[i].title +'</a><br>' + x.query.search[i].snippet + '<hr>');
+                        $(".results").append('<a href="https://en.wikipedia.org/wiki/' + x.query.search[i].title + '" target="_blank">' + '<div class="result animated bounceIn"><bold>' + x.query.search[i].title  +'</bold><br>' + x.query.search[i].snippet + ' ... Read more' + '<br>' + '<span class="md"> Wordcount: ' + x.query.search[i].wordcount + '</span>' + '</div>' + '</a>');
                     }
                 }
                 console.log(x.query.search[1]);

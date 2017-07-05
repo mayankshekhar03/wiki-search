@@ -1,9 +1,10 @@
 
 
 $(document).ready(function(){
-   $(".query").addClass("animated fadeIn");
-   $(".footer").addClass("animated fadeIn");
+   $(".query").addClass("animated fadeInDown");
+   $(".footer").addClass("animated fadeInUp");
    $("#search-button").click(function(e){
+       $(".before").removeClass("before")
         e.preventDefault();  // this shit was causing the api to not load any results wtf
         q = $('#search-input').val();
         $.ajax({
@@ -15,12 +16,12 @@ $(document).ready(function(){
                     showError(q);
                 } else {
                     for (var i = 0; i < x.query.search.length; i++){
-                        $(".results").append('<a href="https://en.wikipedia.org/wiki/' + x.query.search[i].title + '" target="_blank">' + '<div class="result animated bounceIn"><bold>' + x.query.search[i].title  +'</bold><br>' + x.query.search[i].snippet + ' ... Read more' + '<br>' + '<span class="md"> Wordcount: ' + x.query.search[i].wordcount + '</span>' + '</div>' + '</a>');
+                        $(".results").append('<a href="https://en.wikipedia.org/wiki/' + x.query.search[i].title + '" target="_blank">' + '<div class="result animated fadeInUp"><em>' + x.query.search[i].title  +'</em><br><br>' + x.query.search[i].snippet + ' ... Read more' + '<br>' + '<br><span class="md"> Wordcount: ' + x.query.search[i].wordcount + '</span>' + '</div>' + '</a>');
                     }
                 }
                 console.log(x.query.search[1]);
             },
-            error: function(){alert('error retrieving data.');}
+            error: function(){alert('Error retrieving data. Please try again later.');}
         });
     });
     

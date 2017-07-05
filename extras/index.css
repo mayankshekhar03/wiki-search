@@ -122,7 +122,7 @@
         padding: 10px;
         text-align: center;
         background-color: bisque;
-        font-size: 2em;
+        font-size: 3em;
     }
     
     .search {
@@ -138,7 +138,7 @@
         border-top-left-radius: 18px;
         color: white;
         float: left;
-        font-size: 2em;
+        font-size: 3em;
     }
     
     #search-input::placeholder {
@@ -148,7 +148,7 @@
     #search-button {
         padding: 7px;
         border: none;
-        font-size: 2em;
+        font-size: 3em;
         margin-right: 10px;
         background-color: dodgerblue;
         color: white;
@@ -157,11 +157,12 @@
     }
     
     #random {
+        margin-top: 5px;
         padding: 7px;
         border: none;
         border-radius: 5px;
         color: white;
-        font-size: 2em;
+        font-size: 3em;
         background-color: dodgerblue;
     }
     

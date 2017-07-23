@@ -1,4 +1,4 @@
-  @media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
     body{
         margin: 0px;
     }
@@ -8,6 +8,7 @@
         overflow: auto;
         padding: 10px;
         background: #f4f5f7;
+        position: relative;
     }
 
     .search {
@@ -21,6 +22,9 @@
         background-color: dodgerblue;
         border-radius: 5px;
         margin-left: 10px;
+        position: absolute;
+        left: 240px;
+        top: 10px;
     }
 
     #search-input {
@@ -87,10 +91,29 @@
     }
       
       .before {
-          text-align: center;
-          margin-top: 200px;
-          border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
+          width: 400px;
+      }
+    
+    .before > .footer {
+        margin-top: 0px;
+    }
+    
+    .before > .results {
+        margin-top: 0px;
+    }
+      
+      #res {
+          width: 50%;
+          margin: auto;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          padding: 10px;
+      }
+      
+      #res > span {
+          padding: 10px;
+          border-radius: 20px;
+          border: 1px solid blue;
       }
 }
 
@@ -112,6 +135,7 @@
         margin-bottom: 17px;
         border-radius: 2px;
         box-shadow: 0px 0px 5px darkviolet;
+        font-size: 3em;
     }
     
     .results > a {
@@ -122,23 +146,46 @@
         padding: 10px;
         text-align: center;
         background-color: bisque;
-        font-size: 3em;
+        font-size: 2em;
+        position: fixed;
+        bottom: 0px;
+        min-width: 97%;
     }
     
     .search {
-        display:inline-block;
+        display: inline-block;
     }
     
     #search-input {
         outline: none;
         border: none;
         padding: 7px;
+        max-width: 80%;
         background-color: darkviolet;
         border-bottom-left-radius: 18px;
         border-top-left-radius: 18px;
         color: white;
-        float: left;
+        position: relative;
         font-size: 3em;
+    }
+    
+    #res {
+        padding: 5px;
+        border-radius: 5%;
+        max-width: 80%;
+        margin: auto;
+        text-align: left;
+        font-size: 3em;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    #res > span {
+        padding: 10px;
+        margin-right: 5px;
+        border-radius: 30px;
+        background-color: aqua;
+        border: 1px solid blue;
     }
     
     #search-input::placeholder {

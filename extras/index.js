@@ -4,7 +4,7 @@ $(document).ready(function(){
    $(".query").addClass("animated fadeInDown");
    $(".footer").addClass("animated fadeInUp");
    $("#search-button").click(function(e){
-       $(".before").removeClass("before")
+       $(".before").removeClass("before");
         e.preventDefault();  // this shit was causing the api to not load any results wtf
         q = $('#search-input').val();
         $.ajax({

@@ -1,10 +1,10 @@
 
 
 $(document).ready(function(){
-   $(".query").addClass("animated fadeInDown");
-   $(".footer").addClass("animated fadeInUp");
-   $("#search-button").click(function(e){
-       $(".before").removeClass("before");
+    $(".query").addClass("animated fadeInDown");
+    $(".footer").addClass("animated fadeInUp");
+    $("#search-button").click(function(e){
+        $(".before").removeClass("before");
         e.preventDefault();  // this shit was causing the api to not load any results wtf
         q = $('#search-input').val();
         $.ajax({
@@ -24,7 +24,6 @@ $(document).ready(function(){
             error: function(){alert('Error retrieving data. Please try again later.');}
         });
     });
-    
     function showError(key) {
         $(".results").html("<p>Sorry the requested keyword " + key + " didn't return any results. Try one of the following actions:<ul><li>Try making the keyword more general.</li><li>Try other variants for the keyword.</li></ul></p>")
     }

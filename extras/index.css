@@ -134,6 +134,7 @@
     
     .results {
         padding: 10px;
+        margin-bottom: 20px;
     }
     
     .result {
@@ -181,7 +182,7 @@
         padding: 10px;
         background-color: white;
         border: 1px solid blue;
-        font-size: 1.5em;
+        font-size: 2em;
     }
     
     #search-input::placeholder {
